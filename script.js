@@ -66,14 +66,14 @@ btnHoldDice.addEventListener('click', function () {
     scores[activePlayer] += currentScore;
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer];
-    // if score of a player is greater than 100
+    // if score of a player is greater than 50
     if (scores[activePlayer] > 50) {
       playing = false;
       diceEl.classList.add('hidden');
       jsConfetti.addConfetti({
-        emojis: ['🐷', '🎉'],
-        emojiSize: 60,
-        confettiNumber: 50,
+        emojis: ['🐷', '🎉', '🍾'],
+        emojiSize: 40,
+        confettiNumber: 80,
       });
       document
         .querySelector(`.player--${activePlayer}`)
